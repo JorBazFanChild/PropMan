@@ -1,4 +1,4 @@
-# Prop Man #
+# Rentopia #
 
 <!-- 
 > This material was originally posted [here](http://www.quora.com/What-is-Amazons-approach-to-product-development-and-product-management). It is reproduced here for posterity's sake.
@@ -26,7 +26,7 @@ Once the project moves into development, the press release can be used as a touc
 
 ## Summary ##
 
-  Prop Man gives landlords an easy to understand, but also comprehensive dashboard to monitor their properties and tenants. It eases the amount of effort and time landlords need to invest in managing any given property, leaving them with more time to hone and expand their business. Prop Man not only make a landlord's job easier, but also increases tenant satisfaction by providing a centralized reference for pertinent information with the means for fast and easy communication.
+  Rentopia gives landlords an easy to understand, but also comprehensive dashboard to monitor their properties and tenants. It eases the amount of effort and time landlords need to invest in managing any given property, leaving them with more time to hone and expand their business. Rentopia not only make a landlord's job easier, but also increases tenant satisfaction by providing a centralized reference for pertinent information with the means for fast and easy communication.
 
 ## Problem ##
 
@@ -36,7 +36,7 @@ Once the project moves into development, the press release can be used as a touc
 
 ## Solution ##
 
-  Prop Man solves these issues using technology people have come to expect in our era. As a landlord, you want your tenants to honor their leases, respect you and your property, and of course ***pay rent on time.*** PropMan effectively communicates these things while also increasing tenant accountability through notifications and accessibility. 
+  Rentopia solves these issues using technology people have come to expect in our era. As a landlord, you want your tenants to honor their leases, respect you and your property, and of course ***pay rent on time.*** PropMan effectively communicates these things while also increasing tenant accountability through notifications and accessibility. 
   Tenants want a safe, comfortable environment to live in and have their concerns addressed promptly and thoroughly. PropMan allows a landlord to fulfill these expectations while making it require less focused attention.
 
 ## Quote from You ##
