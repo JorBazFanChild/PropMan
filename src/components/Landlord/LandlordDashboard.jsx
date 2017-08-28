@@ -2,7 +2,7 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 
-import LandlordNavBar  from './LandlordNavBar.jsx';
+import LandlordHeader  from './LandlordHeader.jsx';
 import Properties  from './LandlordProperties.jsx';
 import Tenants  from './LandlordTenants.jsx';
 
@@ -13,14 +13,14 @@ class LandlordDashboard extends React.Component {
   render() {
     return (
       <div>
-        <LandlordNavBar />
+        <LandlordHeader />
+        <h3 className="pageTitle"> Manage your Estate </h3>
         <main>
           <Switch>
             <Route path='/proprietor/properties' component={Properties} />
             <Route path='/proprietor/tenants' component={Tenants} />
           </Switch>
         </main>
-        <h3> LandLordz </h3>
         <p> {this.props.media} </p>
       </div>
     )
