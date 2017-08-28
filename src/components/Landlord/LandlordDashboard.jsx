@@ -14,7 +14,7 @@ class LandlordDashboard extends React.Component {
     return (
       <div>
         <LandlordHeader />
-        <h3 className="pageTitle"> Manage your Estate </h3>
+        <h2 className="pageTitle"> Manage your Estate </h2>
         <main>
           <Switch>
             <Route path='/proprietor/properties' component={Properties} />
