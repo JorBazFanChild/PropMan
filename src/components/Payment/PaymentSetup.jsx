@@ -6,12 +6,16 @@ import { Accordion, Panel } from 'react-bootstrap'
 import { Link, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 
+import PaymentSetupSuccess from './PaymentSetupSuccess.jsx'
+import venmo from '../../images/venmo_logo.png'
+import bank from '../../images/bank-icon.png'
+
 class PaymentSetup extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       bankIsSelected: true,
-      fireRedirect: false,
+      openModal: false,
       user: this.props.user
     }
   }
@@ -77,7 +81,7 @@ class PaymentSetup extends React.Component {
       })
       .then((res) => {
         this.setState({
-          fireRedirect: true
+          openModal: true
         })
       })
   }
@@ -168,7 +172,7 @@ class PaymentSetup extends React.Component {
                 <label>Street Address</label><br/><input name="street" className="paymentInput"></input><br/>
                 <label>City</label><br/><input name="city" className="paymentInput"></input><br/>
                 <label>State</label><br/>
-                <select name="state">
+                <select name="state" className="statesSelect">
                   {this.renderStates()}
                 </select>
                 <br/>
@@ -178,7 +182,7 @@ class PaymentSetup extends React.Component {
                   <h5>Select your desired payment method</h5>
                   <div className="paymentOption">
                     <label>
-                      <img src="http://www.freeiconspng.com/uploads/bank-icon-5.png" /><br/>
+                      <img src={bank} /><br/>
                       <input className="paymentOption"
                         type="radio" 
                         value="bank" 
@@ -189,7 +193,7 @@ class PaymentSetup extends React.Component {
                   </div>
                   <div className="paymentOption">
                     <label>
-                      <img className="venmo" src="http://brand.venmo.com/img/logo-mark.png" /><br/>
+                      <img className="venmo" src={venmo} /><br/>
                       <input className="paymentOption"
                         type="radio" 
                         value="venmo" 
@@ -207,6 +211,7 @@ class PaymentSetup extends React.Component {
               <button type="submit"> Submit</button>
             </div>
           </form>
+          {this.state.openModal && <PaymentSetupSuccess />}
       </div>
     )
   }

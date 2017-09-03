@@ -27,10 +27,9 @@ class LandlordTransactions extends React.Component {
   }
 
   render() {
-    if (this.props.merchant_id) {
+    if (this.props.landlordData.payment_set_up) {
       return (
         <div className="transactionsTable">
-          {console.log(this.props.landlordData)}
           <h2>Past Payments</h2>
           <BootstrapTable data={ this.state.transactions } striped={ true } hover={ true } condensed={ true }>
             <TableHeaderColumn dataField='id' dataSort={ true } isKey={ true }>Transaction ID</TableHeaderColumn>
@@ -41,13 +40,14 @@ class LandlordTransactions extends React.Component {
           </BootstrapTable>
         </div>
       )
+    } else {
+      return (
+        <div className="paymentSetupWarning">
+          <h4>Sorry! It looks like you haven't set up your payment information yet.</h4>
+          <button><Link to='/proprietor/paymentsetup'>Set up payment</Link></button>
+        </div>
+      )
     }
-    return (
-      <div className="paymentSetupWarning">
-        <h4>Sorry! It looks like you haven't set up your payment information yet.</h4>
-        <button><Link to='/proprietor/paymentsetup'>Set up payment</Link></button>
-      </div>
-    )
   }
 }
 
