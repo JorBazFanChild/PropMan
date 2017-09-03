@@ -26,13 +26,8 @@ class LandlordTransactions extends React.Component {
     }
   }
 
-  componentWillMount() {
-    console.log(this.props)
-  }
-
   render() {
-    {console.log(this.props.landlordData.merchant_id)}
-    if (this.props.landlordData.merchant_id) {
+    if (this.props.landlordData.merchant_id !== null) {
       return (
         <div className="transactionsTable">
           <h2>Past Payments</h2>
@@ -45,13 +40,14 @@ class LandlordTransactions extends React.Component {
           </BootstrapTable>
         </div>
       )
+    } else {
+      return (
+        <div className="paymentSetupWarning">
+          <h4>Sorry! It looks like you haven't set up your payment information yet.</h4>
+          <button><Link to='/proprietor/paymentsetup'>Set up payment</Link></button>
+        </div>
+      )
     }
-    return (
-      <div className="paymentSetupWarning">
-        <h4>Sorry! It looks like you haven't set up your payment information yet.</h4>
-        <button><Link to='/proprietor/paymentsetup'>Set up payment</Link></button>
-      </div>
-    )
   }
 }
 
