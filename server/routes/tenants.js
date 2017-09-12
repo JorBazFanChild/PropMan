@@ -33,6 +33,8 @@ exports.checkForActiveTenant = checkForActiveTenant
 
 const createNewTenant = async (ctx, user, property_id) => {
 	let tenant
+	// console.log('TELL ME EVERYTHING', user, property_id)
+	if(ctx.request.body.email) ctx.request.body.tenant_email = ctx.request.body.email
 	if(ctx.request.body.tenant_email) {
 		if(user && property_id) {
 			// created by landlord
@@ -81,7 +83,7 @@ const getLandlordTenants = async (ctx, landlord_id, condition) => {
 exports.getLandlordTenants = getLandlordTenants
 
 const retrieveActiveTenantData = async (ctx, tenant) => {
-	let property, docArray, messagesArray, transactions, broadcasts, otherTenants, landlord, output
+	let property, docArray, messagesArray, transactions, broadcasts, otherTenants, landlord, expenses, output
 	property = await props.getProperty(ctx, tenant.property_id)
 	if(property) {
 		[broadcasts, otherTenants, landlord] = await Promise.all([
@@ -102,7 +104,7 @@ const retrieveActiveTenantData = async (ctx, tenant) => {
 	// messagesArray = await Messages.getUserMessages(ctx, tenant.user_id)
 	// transactions = await payments.getUserTransactions(ctx, tenant)
 	output = { tenant: tenant, property: property, messages: messagesArray, docs: docArray, otherTenants: otherTenants, landlord: landlord, transactions: transactions, expenses: expenses }
-	console.log(output)
+	// console.log(output)
 	return output
 }
 exports.retrieveActiveTenantData = retrieveActiveTenantData
