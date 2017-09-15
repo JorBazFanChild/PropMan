@@ -46,7 +46,7 @@ class Properties extends React.Component {
           "lng": lng,
         }, (res, data) => {
           if (res) {
-            console.log(res, data)
+            // console.log(res, data)
           } else {
             alert('failure to login upon signup')
           }
@@ -54,7 +54,7 @@ class Properties extends React.Component {
         e.target.property_name.value = '',
         e.target.address.value = '',
         e.target.city.value = '',
-        e.target.state_abbr.value = 'CA'
+        e.target.state_abbr.value = 'TX'
       } else {
         alert('Error validating your address: ', status)
       }

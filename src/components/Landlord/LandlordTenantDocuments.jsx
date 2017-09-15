@@ -100,11 +100,6 @@ class Documents extends React.Component {
     });
   }
 
-  sendDocumentToTenant(e) {
-    e.preventDefault()
-    console.log('Send document to Tenant!')
-  }
-
   renderTenants() {
     return this.props.tenants.map((tenant) => {
       return (
@@ -124,14 +119,6 @@ class Documents extends React.Component {
                 this.state.tenantDocuments.map(doc => 
                   <div key={doc.document_id}>
                     <a target="_blank" href={doc.doc_url}>{doc.doc_body} </a>
-                    {!this.props.tenants ? null :
-                      <span>
-                        <select name="tenant_id">
-                          {this.renderTenants()}
-                        </select>
-                        <button onClick={this.sendDocumentToTenant.bind(this)}> Send File </button>
-                      </span>
-                    }
                   </div>
                 )
               }

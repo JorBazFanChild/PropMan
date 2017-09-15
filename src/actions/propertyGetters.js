@@ -23,7 +23,6 @@ export function getPropertyTenants2(property_id) {
 }
 
 export function addPropertyTenant(tenantInfo, cb) {
-  console.log(tenantInfo)
   const associatedTenant = axios.post(`${ROOT_URL}/api/tenants/bylandlord/create`, {
     property_id: tenantInfo.property_id,
     tenant_email: tenantInfo.tenant_email,

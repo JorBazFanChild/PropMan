@@ -9,17 +9,17 @@ import { REHYDRATE } from 'redux-persist/constants'
 
 export function userData(state = {}, action) {
   switch(action.type) {
-    case USER_LOGIN: 
-    console.log('login request is ', action.payload)
+    case USER_LOGIN:
+    // console.log('login request is ', action.payload)
       return action.payload.data.user
     case SET_PROFILE:
-    console.log('set profile reducer', action.payload)
+    // console.log('set profile reducer', action.payload)
     	return action.payload.data.user
     case SET_MULTI:
-    console.log('set multifactor', action.payload)
+    // console.log('set multifactor', action.payload)
       return action.payload.data
     case REMOVE_MULTI:
-    console.log('remove multifactor', action.payload)
+    // console.log('remove multifactor', action.payload)
       return action.payload.data  
     case SUBMERCHANT_CREATION:
       return action.payload.data

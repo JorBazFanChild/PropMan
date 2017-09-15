@@ -21,7 +21,6 @@ export function receivedTransactions(state=[], action) {
       }
     case BILL_SHARE_PAYMENT:
       if (action.payload.data) {
-        console.log(action.payload.data)
         return action.payload.data.allTransactions.receivedPayments
       } else {
         return state

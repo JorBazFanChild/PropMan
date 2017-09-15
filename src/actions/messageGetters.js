@@ -5,7 +5,7 @@ export const DIRECT_MESSAGES = 'direct_messages'
 const ROOT_URL = process.env.NODE_ENV === 'production' ? 'http://myrentopia.com': 'http://localhost:8000'
 
 export function sendMessage(info) {
-	console.log(info, info.sender_id)
+	// console.log(info, info.sender_id)
   const request = axios.post(`${ROOT_URL}/api/messages/`, {
       sender_id: info.sender_id,
       recipient_id: info.recipient_id,
@@ -22,7 +22,7 @@ export function sendMessage(info) {
 
 
 export function sendBroadcast(info) {
-  console.log('broadcast action', info)
+  // console.log('broadcast action', info)
   const request = axios.post(`${ROOT_URL}/api/messages/`, info)
 
   return {

@@ -59,7 +59,7 @@ class UserProfile extends Component {
 
 			this.props.setEditedProfileInfo(profileObj, this.props.userId)
 			  .then((response) => {
-			  	console.log('response from profile edit', response)
+			  	// console.log('response from profile edit', response)
 			  })
 
 			event.target.name.value = ''

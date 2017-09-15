@@ -58,12 +58,6 @@ class Tenants extends React.Component {
       "property_id": property.property_id,
       "rent": e.target.rent.value,
       "due_date": `${e.target.day.value}/${monthNum}/${e.target.year.value}`
-    }, (res, data) => {
-      if (res) {
-        console.log(res, data)
-      } else {
-        alert('failure to login upon signup')
-      }
     })
     e.target.tenant_email.value = ''
     e.target.rent.value = ''
